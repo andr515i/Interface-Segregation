@@ -2,17 +2,35 @@
 classDiagram
     class ICharacter{
         <<interface>>
-        + ThrowMagicMisile()
         + Heal()
         + Die()
-        + ThrowFrostNova()
-        + RaiseShield()
+
         + Fight()
-        + Teleport(x:int, y:int)
-        + Bash()
+
+
+
+    }
+    class IWizard{
+    <<interface>>
+            + ThrowMagicMisile()
+        + ThrowFrostNova()
+
+        }
+
+    class IWarrior {
+        <<interface>>
+                + Bash()
         + Cleave()
         + Slash()
-        + ShieldGlare()
+    }
+        class IPaladin {
+        <<interface>>
+                + RaiseShield()
+                        + ShieldGlare()
+    }
+        class IWitch {
+        <<interface>>
+                + Teleport(x:int, y:int)
     }
     class Wizard{
         + ThrowMagicMisile()
@@ -49,9 +67,16 @@ classDiagram
         + Teleport(x:int, y:int)
     }
 
-    ICharacter <.. Wizard
-    ICharacter <.. Babarian
-    ICharacter <.. Knight
-    ICharacter <.. Witch
+    ICharacter <.. IWizard
+    ICharacter <.. IWarrior
+    ICharacter <.. IPaladin
+    ICharacter <.. IWitch
+    IWizard <.. Wizard
+    IWarrior <.. Babarian 
+    IWarrior <.. Knight
+    IPaladin <.. Knight
+    IWitch <.. Witch
+    IWitch <.. IWizard
+
 
 ```
