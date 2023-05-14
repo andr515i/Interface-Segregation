@@ -1,67 +1,47 @@
-```mermaid
-classDiagram
+```mermaidclassDiagram
     class ICharacter{
         <<interface>>
         + Heal()
         + Die()
-
         + Fight()
-
-
-
     }
     class IWizard{
     <<interface>>
-            + ThrowMagicMisile()
+        + ThrowMagicMisile()
         + ThrowFrostNova()
-
         }
-
     class IWarrior {
         <<interface>>
-                + Bash()
+        + Bash()
         + Cleave()
         + Slash()
     }
         class IPaladin {
         <<interface>>
-                + RaiseShield()
-                        + ShieldGlare()
+        + RaiseShield()
+        + ShieldGlare()
     }
         class IWitch {
         <<interface>>
-                + Teleport(x:int, y:int)
+        + Teleport(x:int, y:int)
     }
     class Wizard{
         + ThrowMagicMisile()
-        + Heal()
-        + Die()
         + ThrowFrostNova()
-        + Fight()
-        + Teleport(x:int, y:int)
-    }
+        }
     class Babarian{
         + Bash()
         + Cleave()
-        + Die()
-        + Fight()
-        + Heal()
         + Slash()
     }
     class Knight{
         + Bash()
         + Cleave()
-        + Die()
-        + Fight()
-        + Heal()
         + RaiseShield()
         + Slash()
         + ShieldGlare()
     }
     class Witch{
-        + Die()
-        + Fight()
-        + Heal()
         + RaiseShield()
         + ShieldGlare()
         + Teleport(x:int, y:int)
