@@ -1,4 +1,5 @@
-```mermaidclassDiagram
+```mermaid
+classDiagram
     class ICharacter{
         <<interface>>
         + Heal()
